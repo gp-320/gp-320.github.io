@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎~</title>
+    <title>欢迎来到Gp的个人网站</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Noto Sans SC', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #00b4db 0%, #ffffff 100%);
             color: #333;
             min-height: 100vh;
             display: flex;
@@ -23,6 +23,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            background-attachment: fixed;
         }
         
         .container {
@@ -33,8 +34,31 @@
             align-items: center;
         }
         
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             padding: 40px;
@@ -43,6 +67,7 @@
             text-align: center;
             margin-bottom: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(5px);
         }
         
         .card:hover {
@@ -54,7 +79,7 @@
             font-weight: 700;
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: #0083b0;
             position: relative;
             display: inline-block;
         }
@@ -67,7 +92,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #2196F3, #21CBF3);
+            background: linear-gradient(90deg, #00b4db, #0083b0);
             border-radius: 2px;
         }
         
@@ -80,7 +105,7 @@
         
         .material-icons {
             font-size: 4rem;
-            color: #2196F3;
+            color: #00b4db;
             margin-bottom: 20px;
             animation: pulse 2s infinite;
         }
@@ -110,6 +135,27 @@
             100% { transform: rotate(0deg); }
         }
         
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .fab:hover {
+            transform: scale(1.1) rotate(90deg);
+        }
+        
         .footer {
             margin-top: 30px;
             color: #607d8b;
@@ -129,11 +175,26 @@
             .card {
                 padding: 30px 20px;
             }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-text">Gp</div>
+            </div>
+        </header>
+        
         <div class="card">
             <span class="material-icons">emoji_people</span>
             <h1>欢迎<span class="wave">~</span></h1>
@@ -141,8 +202,18 @@
         </div>
         
         <div class="footer">
-            <p>Material Design | 2025</p>
+            <p>采用Material Design风格 | 青色白色渐变主题 | 2023</p>
+        </div>
+        
+        <div class="fab">
+            <span class="material-icons">email</span>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.fab').addEventListener('click', function() {
+            alert('感谢访问！');
+        });
+    </script>
 </body>
 </html>
